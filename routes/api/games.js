@@ -36,4 +36,4 @@ router.delete('/:id', (req, res) => {
     .catch(err => res.status(400).json({ error: 'No such Game' }));
 });
 
-module.exports - router;
+module.exports = router;
