@@ -8,7 +8,7 @@ router.get('/test', (req, res) => res.send('game route testing'));
 
 router.get('/', (req, res) => {
     Game.find()
-      .then(games => res.json(games))
+      .then(games => res.json({games: games}))
       .catch(err => res.status(404).json({ nogamesfound: 'No Games Found' }));
 });
 
